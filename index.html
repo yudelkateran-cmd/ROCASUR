@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocasur</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <h1>ROCA SUR SPA</h1>
+    <div id="header-container"></div>
+    <main class="hero-section">
+        
+        <section class="hero-left">
+            <img src="./image/mina.jpg" alt="Faena Minera" class="hero-bg-img">
+            <div class="hero-overlay"></div> 
+            
+            <div class="hero-content">
+                <h1>ROCASUR<br>Abasteciendo de cobre<br>y oro al mundo</h1>
+            </div>
+        </section>
+
+        <section class="hero-right">
+            <img src="./image/mapa.png" alt="Mapa de rutas globales" class="map-img">
+        </section>
+
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/footer.js"></script>
   </body>
 </html>
