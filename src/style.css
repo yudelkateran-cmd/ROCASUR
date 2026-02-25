@@ -435,14 +435,13 @@ img, .hero-bg-img, .map-img {
 /* ==========================================
    MEDIA QUERIES (VERSIÓN MÓVIL) - ¡SIEMPRE AL FINAL!
    ========================================== */
-/* ==========================================
-   MEDIA QUERIES (VERSIÓN MÓVIL) - ¡SIEMPRE AL FINAL!
-   ========================================== */
+
 @media (max-width: 768px) {
     /* 1. Reparar el Header (Menú y Botón) */
     .main-header {
-        flex-direction: column; /* Apila todo de arriba hacia abajo */
-        height: auto;
+        display: flex !important;
+        flex-direction: column !important; /* Apila todo de arriba hacia abajo */
+        height: auto !important;
         padding: 20px 10px;
         text-align: center;
     }
