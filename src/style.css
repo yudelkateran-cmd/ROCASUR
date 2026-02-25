@@ -448,7 +448,7 @@ img, .hero-bg-img, .map-img {
     
     .logo {
         flex-direction: column; /* Apila el ícono y el texto del logo */
-        margin-bottom: 15px;
+        margin-bottom: 15px !important;
     }
 
     .logo-img {
@@ -485,7 +485,7 @@ img, .hero-bg-img, .map-img {
 
     .hero-content h1 {
         font-size: 26px !important; /* Forzamos un tamaño de letra más manejable */
-        line-height: 1.3;
+        line-height: 1.2 !important;
     }
     
     .hero-right {
