@@ -435,54 +435,76 @@ img, .hero-bg-img, .map-img {
 /* ==========================================
    MEDIA QUERIES (VERSIÓN MÓVIL) - ¡SIEMPRE AL FINAL!
    ========================================== */
+/* ==========================================
+   MEDIA QUERIES (VERSIÓN MÓVIL) - ¡SIEMPRE AL FINAL!
+   ========================================== */
 @media (max-width: 768px) {
-    /* Header: apilamos si no tienes menú hamburguesa configurado */
+    /* 1. Reparar el Header (Menú y Botón) */
     .main-header {
-        flex-direction: column;
+        flex-direction: column; /* Apila todo de arriba hacia abajo */
         height: auto;
-        padding: 15px 20px;
-        gap: 15px;
+        padding: 20px 10px;
+        text-align: center;
     }
     
+    .logo {
+        flex-direction: column; /* Apila el ícono y el texto del logo */
+        margin-bottom: 15px;
+    }
+
+    .logo-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
     .nav-links {
-        margin: 0;
+        margin: 0 !important; /* Obligamos a quitar los márgenes que empujan */
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .nav-links ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Apilamos los enlaces uno debajo del otro */
         gap: 15px;
+        padding: 0;
+        margin-bottom: 20px; /* Espacio antes del botón de contacto */
     }
 
-    /* Hero: de lado a lado a arriba y abajo */
+    /* 2. Reparar el Texto Gigante del Hero */
     .hero-section {
         flex-direction: column;
-        height: auto; /* Permite que crezca según el contenido */
+        height: auto;
+    }
+
+    .hero-left {
+        width: 100%;
+        padding: 40px 15px;
+        text-align: center; /* Centramos el texto para que fluya mejor */
+    }
+
+    .hero-content h1 {
+        font-size: 26px !important; /* Forzamos un tamaño de letra más manejable */
+        line-height: 1.3;
     }
     
-    .hero-left, .hero-right {
+    .hero-right {
         width: 100%;
         padding: 40px 20px;
     }
 
-    .hero-content h1 {
-        font-size: 32px; /* Título un poco más pequeño para que quepa bien */
-    }
-
-    /* Contenedores Generales: forzamos a 1 columna */
+    /* 3. Contenedores Generales y Footer */
     .about-container, 
     .contact-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Una sola columna */
         gap: 2rem;
     }
 
-    /* Formulario: menos relleno interno */
     .contact-form {
         padding: 1.5rem;
     }
 
-    /* Footer: apilado */
     .main-footer {
         flex-direction: column;
     }
@@ -490,9 +512,10 @@ img, .hero-bg-img, .map-img {
     .footer-left, .footer-right {
         width: 100%;
         padding: 20px;
+        text-align: center; /* Centramos el texto del footer en móvil */
     }
     
     .footer-right {
-        min-height: 120px; /* Dale espacio para la estrella */
+        min-height: 120px; 
     }
 }
