@@ -285,3 +285,150 @@
 .about-card:hover svg {
     transform: scale(1.1); /* Crece un 10% */
 }
+
+html {
+    scroll-behavior: smooth;
+}
+/* =========================================
+   MENÚ DESPLEGABLE (DROPDOWN) 
+========================================= */
+
+.nav-links li.dropdown {
+    position: relative; 
+}
+
+/* Le agregamos ".nav-links ul" al principio para que tenga más fuerza y no sea anulado */
+.nav-links ul .dropdown-menu {
+    display: none;          /* Fuerza a que esté oculto */
+    flex-direction: column; /* Obliga a que los items caigan uno debajo del otro */
+    position: absolute;     
+    top: 100%;              
+    left: 0;
+    background-color: #14273d; 
+    min-width: 200px;       
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    border-radius: 4px;
+    border-top: 3px solid #cc7b5d; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1000;          
+}
+
+/* Efecto Hover: Cambiamos de 'none' a 'flex' para mantener la columna */
+.nav-links li.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Estilo de los enlaces dentro del submenú */
+.nav-links ul .dropdown-menu li {
+    width: 100%; /* Asegura que ocupe todo el ancho del cuadrito */
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
+}
+
+.nav-links ul .dropdown-menu li a {
+    margin: 0 !important;
+    display: block;
+    padding: 10px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links ul .dropdown-menu li a:hover {
+    background-color: #0d1b2a; 
+    color: #cc7b5d;            
+}
+.contact-section {
+    background-color: #14273d; /* Azul un poco más claro que el fondo principal */
+    padding: 5rem 2rem;
+    color: #ffffff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Divide en dos columnas iguales en PC, y una en celulares */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Textos de la izquierda */
+.contact-info h2 {
+    color: #cc7b5d;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+/* Estilos del Formulario */
+.contact-form {
+    background-color: #0d1b2a;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-top: 5px solid #cc7b5d;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #1a324d; /* Fondo interior de las cajas */
+    border: 1px solid #2a4566;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    /* Box-sizing es crucial para que no se salgan del contenedor */
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
+/* Efecto al hacer clic para escribir */
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #cc7b5d;
+}
+
+/* Botón de enviar */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #cc7b5d;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #b0654a; /* Un cobre más oscuro al pasar el mouse */
+}
