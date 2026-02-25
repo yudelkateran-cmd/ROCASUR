@@ -98,22 +98,23 @@
 .main-footer {
     display: flex;
     width: 100%;
-    min-height: 150px; /* Altura del footer */
+    min-height: 100px; /* Altura del footer */
 }
 
 /* Mitad Izquierda (Azul) */
 .footer-left {
     flex: 1; /* Toma el 50% del ancho */
     background-color: #0d1f35; /* El mismo azul marino de tu header */
-    padding: 40px 50px;
+    padding: 30px 40px;
     display: flex;
     align-items: center; /* Centra el texto verticalmente */
 }
 
 .footer-slogan {
-    font-size: 22px;
+    font-size: 18px;
+    padding-bottom: 5px;
     font-weight: normal;
-    line-height: 1.4;
+    line-height: 1.2;
     max-width: 90%;
 }
 
@@ -208,4 +209,79 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+/* =========================================
+   SECCIÓN ACERCA DE NOSOTROS (Tarjetas)
+========================================= */
+
+.about-section {
+    /* Color azul oscuro base del sitio */
+    background-color: #0d1b2a; 
+    padding: 5rem 2rem;
+    color: #ffffff;
+    font-family: sans-serif; /* Si tienes una fuente importada como Roboto o Montserrat, ponla aquí */
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* Magia responsiva: crea 3 columnas en PC, y pasa a 1 columna en celulares */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.about-card {
+    /* Un azul levamente más claro que el fondo para crear contraste */
+    background-color: #14273d; 
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    /* La línea superior con el color cobrizo de la marca */
+    border-top: 5px solid #cc7b5d; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover: la tarjeta se eleva un poco al pasar el mouse */
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h3 {
+    color: #cc7b5d; /* Tono cobrizo para los títulos */
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.about-card p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #e0e0e0; /* Blanco apagado/gris claro para cansar menos la vista */
+    margin: 0;
+}
+/* =========================================
+   ESTILOS PARA LOS ÍCONOS DE LAS TARJETAS
+========================================= */
+
+/* Contenedor para el ícono, ayuda a centrarlo y darle espacio */
+.card-icon-wrapper {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start; /* Alinea el ícono a la izquierda junto al título */
+}
+
+/* Estilos directos al SVG */
+.about-card svg {
+    /* Usamos el mismo color cobrizo que el borde superior y los títulos */
+    stroke: #cc7b5d; 
+    width: 48px;  /* Tamaño del ícono */
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto extra: el ícono se mueve un poquito al pasar el mouse sobre la tarjeta */
+.about-card:hover svg {
+    transform: scale(1.1); /* Crece un 10% */
 }
