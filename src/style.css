@@ -432,3 +432,11 @@ html {
 .btn-submit:hover {
     background-color: #b0654a; /* Un cobre más oscuro al pasar el mouse */
 }
+.copyright {
+    display: block; /* Obliga al elemento a bajar a una nueva línea */
+    margin-top: 8px; /* Opcional: añade un poco de espacio arriba para que no quede tan pegado */
+    margin-right: 0;
+    font-size: 0.8em; /* Opcional: hace que el texto del copyright sea un poco más pequeño */
+    color: #a0aab5;
+    text-align: right;
+}
